@@ -7,20 +7,19 @@ int main() {
     string str;
     cout << "Digite uma string: ";
     getline(cin, str);
+    int len = str.length();
+    int i = len - 1;
+    int flag = 0;
 
-    for (int i = 0; i < str.length(); i++) {
-        if (isalpha(str[i])) {
-            if (str[i] == 'z') {
-                str[i] = 'a';
-            } else if (str[i] == 'Z') {
-                str[i] = 'A';
-            } else {
-                str[i]++;
-            }
+    for (int j = 0; i > j; j++, i--) {
+        if (str[i] != str[j]) {
+            cout << "não é um palindrome";
+            flag = 1;
+            break;
         }
     }
-
-    cout << "String transformada: " << str << endl;
-
+    if(flag == 0) {
+        cout << "eh um palindrome";
+    }
     return 0;
 }
