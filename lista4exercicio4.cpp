@@ -1,0 +1,1 @@
+//4) Crie um programa que compara duas strings (não use a função strcmp
