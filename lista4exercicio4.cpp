@@ -1,6 +1,7 @@
 //4) Crie um programa que compara duas strings (não use a função strcmp
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 int comparaStrings(string str1, string str2) {
@@ -8,7 +9,7 @@ int comparaStrings(string str1, string str2) {
         return 0;
     }
     for (int i = 0; i < str1.length(); i++) {
-        if (str1[i] != str2[i]) {
+        if (toupper(str1[i]) != toupper(str2[i])) {
             return 0;
         }
     }
